@@ -1,0 +1,23 @@
+<div>
+    <button type="button" title="Add" (click)="addRecipe()">Add Recipe </button>
+    <table>
+        <tr>
+            <th>Options</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Ingredients</th>
+            <th>Process</th>
+            <th>Youtube Link</th>
+        </tr>
+        <tr *ngFor="let item of listCookBooks">
+            <td>
+                <button type="button" title="Edit" (click)="editRecipe(item)">Edit</button>
+            </td>
+            <td>{{item.title}}</td>
+            <td>{{item.description}}</td>
+            <td>{{item.ingredients}}</td>
+            <td>{{item.process}}</td>
+            <td>{{item.youTubeLink}}</td>
+        </tr>
+    </table>
+</div>
